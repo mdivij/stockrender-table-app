@@ -1,0 +1,30 @@
+{
+  "name": "Stockrender-Table-App",
+  "version": "0.0.1",
+  "authors": [
+    "asosnovsky <arielsosnovsky@gmail.com>",
+    "Marcin Zegarmistrz",
+    "Richard Ren",
+    "Luke Caccamo"
+  ],
+  "description": "Stockrender table application",
+  "main": "index.html",
+  "keywords": [
+    "stockrender"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "async": "~1.2.1",
+    "numeraljs": "~1.5.3",
+    "bootstrap": "~3.3.4",
+    "tablesorter": "*",
+    "bootstrap-tagautocomplete": "*"
+  }
+}

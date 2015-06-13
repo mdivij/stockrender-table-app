@@ -1,0 +1,5 @@
+bower_components
+.floo
+.flooignore
+*.swp
+npm-debug.log
