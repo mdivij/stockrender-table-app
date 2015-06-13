@@ -37,7 +37,8 @@ function addToList (item) {
 function loadData(ticker, type) {
 	return new Promise(function (res, rej) {
 		SR.AppData.v1.direct.GET(ticker, type, {from:"2013-01-01"}).then(function(data){
-			res((data.response.data.length > 0?data.response.data[0][1]:'NA'));
+			console.log('\n>',ticker, type,data);
+			res(((data&&data.response&&data.response.data.length > 0)?data.response.data[0][1]:'NA'));
 		})	
 	})
 }
