@@ -34,20 +34,33 @@
 		<!-- JS -->
 	</head>
 	<body>
-		<div class="overhead">
+		<div class="overhead loading">
 			<div class="spinner"></div>
 			<span> Loading...</span>
 		</div>
 		<div class="container">
 			<div class="row desk">
-				<div class="col-xs-3 col-sm-3 col-md-3 col-lg-3">
-					<input class="typeahead" type="text" id="ticker" placeholder="Ticker/Stock Name">
-				</div>
-				<div class="col-xs-3 col-sm-3 col-md-3 col-lg-3">
-					<input class="typeahead" type="text" id="type" placeholder="Dataset">
-				</div>
-				<div class="col-xs-2 col-sm-2 col-md-2 col-lg-2">
-					<button type="button" id="addToTable" class="btn btn-sm btn-primary"><i class="glyphicon glyphicon-plus"></i> Add</button>
+				<div class="input-group col-sm-6 col-md-6 col-lg-6">
+					<input class="form-control" id="ticker" placeholder="Ticker/Stock Name" type="text">
+					<div class="input-group-btn">
+						<button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
+							Dataset <span class="caret"></span>
+							<span class="sr-only">Dataset</span>
+						</button>
+						<ul class="dropdown-menu dropdown-menu-right" role="menu">
+							<li><a><b>Price Data</b></a></li>
+							<li class="divider"></li>
+							<li><a href="#">Open</a></li>
+							<li><a href="#">Close</a></li>
+							<li><a href="#">Low</a></li>
+							<li><a href="#">High</a></li>
+							<li><a href="#">Volume</a></li>
+							<li><a><b>Fundamental Data</b></a></li>
+							<li class="divider"></li>
+							<li><a href="#">Net Income</a></li>
+						</ul>
+						<button type="button" class="btn btn-default"><i class="glyphicon glyphicon-plus"></i></button>
+					</div>
 				</div>
 			</div>
 			<div class="row">

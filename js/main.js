@@ -21,14 +21,18 @@ $(document).ready(function(){
 			});
 			loadTable();
 			thInit();
-			$('.overhead').css({width:0,opacity:0});
+			$('.loading').css({width:0,opacity:0});
 		});
 	});
 	/*Add to function*/
 	$('#addToTable')[0].onclick = function(){ 
-		addToTable(
-			lists.ticks[$('#ticker').val()] + '/' +
-			lists.types[$('#type').val()]
-			); 
+		if(lists.ticks[$('#ticker').val()] && lists.types[$('#type').val()])	{
+			addToTable(
+				lists.ticks[$('#ticker').val()] + '/' +
+				lists.types[$('#type').val()]
+				); 
+		}	else	{
+			alert('Wrong input!');
+		}
 	}
 });

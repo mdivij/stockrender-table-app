@@ -28,15 +28,3 @@
 			}
 		}
 
-.overhead {
-	width: 100%;
-	height: 100%;
-	position: absolute;
-	top: 0;
-	left: 0;
-	background: #409cde;
-	text-align: center;
-	font-size: 3em;
-	font-family: cursive;
-	transition: all, 0.75s, ease-in-out;
-}

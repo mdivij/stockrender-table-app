@@ -15,11 +15,13 @@
 	position: absolute;
 	top: 0;
 	left: 0;
+	transition: all, 0.75s, ease-in-out;
+}
+.loading {
 	background: #409cde;
 	text-align: center;
 	font-size: 3em;
 	font-family: cursive;
-	transition: all, 0.75s, ease-in-out;
 }
 .tt-menu {
 	padding: 8px 0px;
@@ -31,4 +33,8 @@
 .tt-suggestion {
 	padding: 3px 20px;
 	line-height: 24px;
+}
+.twitter-typeahead {
+	width: 100%;
+	margin-top: 1%;
 }
