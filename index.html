@@ -8,6 +8,7 @@
 			<!-- Bower -->
 			<!-- Supplementary Code -->
 				<link rel="stylesheet" type="text/css" href="css/loading-anim.css">
+				<link rel="stylesheet" type="text/css" href="css/dropdown.css">
 				<link rel="stylesheet" type="text/css" href="css/main.css">
 			<!-- Supplementary Code -->
 		<!-- CSS -->
@@ -29,6 +30,8 @@
 					<script src="js/table.js"></script>
 					<script src="js/memory.js"></script>
 					<script src="js/typeahead.js"></script>
+					<script src="js/datasets.js"></script>
+					<script src="js/alerts.js"></script>
 					<script src="js/main.js"></script>
 			<!-- Supplementary Code -->
 		<!-- JS -->
@@ -44,22 +47,20 @@
 					<input class="form-control" id="ticker" placeholder="Ticker/Stock Name" type="text">
 					<div class="input-group-btn">
 						<button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
-							Dataset <span class="caret"></span>
+							<span id="sel-dataset">Dataset</span> <span class="caret"></span>
 							<span class="sr-only">Dataset</span>
 						</button>
-						<ul class="dropdown-menu dropdown-menu-right" role="menu">
-							<li><a><b>Price Data</b></a></li>
-							<li class="divider"></li>
-							<li><a href="#">Open</a></li>
-							<li><a href="#">Close</a></li>
-							<li><a href="#">Low</a></li>
-							<li><a href="#">High</a></li>
-							<li><a href="#">Volume</a></li>
-							<li><a><b>Fundamental Data</b></a></li>
-							<li class="divider"></li>
-							<li><a href="#">Net Income</a></li>
+						<ul class="dropdown-menu dropdown-menu-right" role="menu" id="datasets">
 						</ul>
-						<button type="button" class="btn btn-default"><i class="glyphicon glyphicon-plus"></i></button>
+						<button type="button" class="btn btn-default" id="addToTable"><i class="glyphicon glyphicon-plus"></i></button>
+					</div>
+				</div>
+				<div class="input-group col-sm-2 col-sm-offset-4 col-md-2 col-md-offset-4 col-lg-2 col-lg-offset-4">
+					<div class="alert alert-success" role="alert">
+						<a href="#" class="alert-link">Added Successfully!</a>
+					</div>
+					<div class="alert alert-danger" role="alert">
+						<a href="#" class="alert-link">Failed to retrieve.</a>
 					</div>
 				</div>
 			</div>

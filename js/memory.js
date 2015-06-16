@@ -15,6 +15,7 @@ var appmemory = new SR.AppMemory();
 		]).then(function () {});
 /*Variables*/
 var lists = {
+	dt: {},
 	id: {},
 	ticker: {},
 	ticks: {},
@@ -37,8 +38,11 @@ function addToList (item) {
 function loadData(ticker, type) {
 	return new Promise(function (res, rej) {
 		SR.AppData.v1.direct.GET(ticker, type, {from:"2013-01-01"}).then(function(data){
-			console.log('\n>',ticker, type,data);
+			// console.log('\n>',ticker, type,data);
 			res(((data&&data.response&&data.response.data.length > 0)?data.response.data[0][1]:'NA'));
+		}, function (reason) {
+			FAIL();
+			rej('NA');
 		})	
 	})
 }

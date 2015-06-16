@@ -34,6 +34,7 @@ function addToTable (item) {
 				data,
 				item
 			);
+			SUCS();
 		});
 	})
 }
