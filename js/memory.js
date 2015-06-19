@@ -1,6 +1,6 @@
 'use strict';
 /*Initiate AppMemory*/
-var appmemory = new SR.AppMemory();
+var appmemory = new SR.AppMemory(SR.AppID, SR.UserID);
 	appmemory.save('list',[
 		'AAPL/assets',
 		'ARI/assets',
@@ -19,7 +19,8 @@ var lists = {
 	id: {},
 	ticker: {},
 	ticks: {},
-	types: {}
+	types: {},
+	price: []
 }
 /**
  * Add values to the memo-list
@@ -37,8 +38,10 @@ function addToList (item) {
  */
 function loadData(ticker, type) {
 	return new Promise(function (res, rej) {
+		if($.inArray(type, lists.price)){
+			type = 'pricedata';
+		}
 		SR.AppData.v1.direct.GET(ticker, type, {from:"2013-01-01"}).then(function(data){
-			// console.log('\n>',ticker, type,data);
 			res(((data&&data.response&&data.response.data.length > 0)?data.response.data[0][1]:'NA'));
 		}, function (reason) {
 			FAIL();

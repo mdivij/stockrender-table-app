@@ -17,6 +17,7 @@ $(document).ready(function(){
 					name		: val.name,
 					description	: val.description
 				};
+				(val.dataset.split('/')[0] === 'price')&&(lists.price.push(val.type));
 				lists.types[(val.name!=="NA"?val.name:val.type)] = val.type;
 			});
 			/*Analyze tickerlist*/
