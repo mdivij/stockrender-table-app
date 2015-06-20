@@ -1,6 +1,7 @@
 {
   "name": "Stockrender-Table-App",
   "version": "0.0.1",
+  "homepage": "https://github.com/asosnovsky/stockrender-table-app",
   "authors": [
     "asosnovsky <arielsosnovsky@gmail.com>",
     "Marcin Zegarmistrz",
