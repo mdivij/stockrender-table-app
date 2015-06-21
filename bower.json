@@ -26,6 +26,7 @@
     "numeraljs": "~1.5.3",
     "bootstrap": "~3.3.4",
     "tablesorter": "*",
-    "bootstrap-tagautocomplete": "*"
+    "bootstrap-tagautocomplete": "*",
+    "typeahead.js": "~0.11.1"
   }
 }
